@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20sp"
+    android:minHeight="100dp">
+
+    <TextView
+        android:id="@+id/tx_number"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:minEms="1"
+
+        android:autoSizeMaxTextSize="300sp"
+        android:autoSizeMinTextSize="25sp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_horizontal"
+        android:minWidth="60dp"
+        android:text="0"
+
+        android:background="@android:color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/background"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/card_no_pill" >
+
+
+        <TextView
+            android:id="@+id/tx_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.5"
+
+            android:layout_marginHorizontal="10dp"
+
+            android:autoSizeMaxTextSize="300sp"
+            android:autoSizeMinTextSize="19sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="top"
+            android:text="DIKSMETAZON"
+
+            app:layout_constraintEnd_toStartOf="@+id/imb_add_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imb_add_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:minWidth="79dp"
+            android:adjustViewBounds="false"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_add" />
+
+        <TextView
+            android:id="@+id/tx_schedule"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+
+            android:autoSizeMaxTextSize="40dp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="top"
+            android:text="in a few hour's"
+
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tx_name"
+            app:layout_constraintStart_toStartOf="@+id/tx_name"
+            app:layout_constraintTop_toBottomOf="@+id/tx_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

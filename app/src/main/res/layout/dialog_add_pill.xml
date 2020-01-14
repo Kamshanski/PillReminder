@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <!--    TODO: в будущем добавить текущее количество таблеток в браслете    -->
+        <!--        <EditText-->
+        <!--            android:id="@+id/edt_containerCapacity"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:minWidth="30dp"-->
+        <!--            android:ems="10"-->
+        <!--            android:hint="Вместимость"-->
+        <!--            android:inputType="number" />-->
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/tx_pillName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textNoSuggestions"
+        android:text=""
+        android:hint="Название таблетки" />
+
+    <TextView
+        android:id="@+id/textView78"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Важность"
+        android:textSize="19sp"/>
+
+    <RadioGroup
+        android:id="@+id/radbGroup_importance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radb_importance_vital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Жизненно важно"
+            android:tag="1"/>
+
+        <RadioButton
+            android:id="@+id/radb_importance_important"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Важно"
+            android:tag="2"/>
+
+        <RadioButton
+            android:id="@+id/radb_importance_unimportatnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Не важно"
+            android:tag="3"/>
+
+        <RadioButton
+            android:id="@+id/radb_importance_dietary_supplements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="БАД"
+            android:tag="4"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Календарь"
+        android:textSize="19sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/сhbox_monday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Пн"
+            android:tag="Пн"/>
+
+        <CheckBox
+            android:id="@+id/сhbox_tuesday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Вт"
+            android:tag="Вт"/>
+
+        <CheckBox
+            android:id="@+id/сhbox_wednesday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ср"
+            android:tag="Ср"/>
+        <CheckBox
+            android:id="@+id/сhbox_thursday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Чт"
+            android:tag="Чт"/>
+
+        <CheckBox
+            android:id="@+id/сhbox_friday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Пт"
+            android:tag="Пт"/>
+
+        <CheckBox
+            android:id="@+id/сhbox_saturday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Сб"
+            android:tag="Сб"/>
+
+        <CheckBox
+            android:id="@+id/сhbox_sunday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Вс"
+            android:tag="Вс"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Повторения"
+        android:textSize="19sp"/>
+
+
+    <LinearLayout
+        android:id="@+id/LL_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.dawandeapp.pillreminder.ui.myviews.AddRepeatView
+            android:id="@+id/addRepeatView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.dawandeapp.pillreminder.ui.myviews.AddRepeatView
+            android:id="@+id/addRepeatView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.dawandeapp.pillreminder.ui.myviews.AddRepeatView
+            android:id="@+id/addRepeatView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tx_addRepeatRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добавить повторение"
+        android:gravity="end"/>
+
+    <Button
+        android:id="@+id/btn_createPill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create" />
+
+
+</LinearLayout>

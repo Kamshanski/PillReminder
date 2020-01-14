@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="#C5302C">
+
+        <!--        TODO: сделать чётче картинку с таблеткой-->
+
+        <ImageView
+            android:id="@+id/pillImage"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/circle"
+            android:paddingVertical="10dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="8dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_important_pill" />
+
+        <TextView
+            android:id="@+id/tx_pillName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="NURAFEN"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pillImage" />
+
+        <TextView
+            android:id="@+id/tx_pillID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="..."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tx_pillName" />
+
+        <Button
+            android:id="@+id/btn_schedule"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Schedule"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+
+
+        <TextView
+            android:id="@+id/pillSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TUT BUDET SCHEDULE\n
+cherez RecycleView ili chto-to druoje"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
